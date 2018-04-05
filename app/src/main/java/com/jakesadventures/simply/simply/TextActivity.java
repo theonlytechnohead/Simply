@@ -10,7 +10,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class TextActivity extends AppCompatActivity {
-    private WebView googleWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +19,6 @@ public class TextActivity extends AppCompatActivity {
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_text);
-
-        googleWebView = findViewById(R.id.googleWebView);
-        WebSettings webSettings = googleWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        googleWebView.setWebViewClient(new WebViewClient());
-        googleWebView.loadUrl("http://www.google.co.nz");
     }
 
     public void goToHome(View view) {
