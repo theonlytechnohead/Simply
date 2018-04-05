@@ -28,4 +28,5 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:12.0.1'
     compile 'com.google.android.gms:play-services-ads:12.0.1'
     compile 'com.google.android.gms:play-services-ads:12.0.1'
+    implementation 'com.android.support:design:27.1.0'
 }

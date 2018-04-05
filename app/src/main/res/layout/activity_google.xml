@@ -26,28 +26,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="goToCall"
-                android:text="CALL" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="goToText"
-                android:text="TEXT" />
-
-            <Button
                 android:id="@+id/homeButton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="goToHome"
-                android:text="HOME" />
+                android:text="HOME"
+                android:textSize="25sp"/>
         </LinearLayout>
 
     </LinearLayout>
