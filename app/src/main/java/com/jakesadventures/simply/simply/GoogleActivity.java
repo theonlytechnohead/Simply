@@ -27,13 +27,6 @@ public class GoogleActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         googleWebView.setWebViewClient(new WebViewClient());
         googleWebView.loadUrl("http://www.google.co.nz");
-        Button homeButton = findViewById(R.id.homeButton);
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.activity_main);
-            }
-        });
     }
 
     public void goToHome(View view) {
