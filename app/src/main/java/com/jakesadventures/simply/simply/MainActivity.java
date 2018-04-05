@@ -39,4 +39,10 @@ public class MainActivity extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_APP_MESSAGING);
         startActivity(intent);
     }
+
+    public void goToCall(View view) {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_APP_CONTACTS);
+        startActivity(intent);
+    }
 }

@@ -28,12 +28,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5.75">
+            android:layout_weight="5.75"
+            android:onClick="goToCall">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000044"
-                android:text="Content goes here -ish"/>
+                android:text="If for some reason a dialog does not apear asking you if you if you would like to set Simply as your home page, please do as follows. Go to Settings -> Apps -> Find Simply -> Click "
+                android:textColor="#000044" />
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
