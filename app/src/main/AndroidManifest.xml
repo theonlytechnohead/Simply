@@ -25,6 +25,9 @@
         <activity android:name=".TextActivity">
 
         </activity>
+        <activity android:name=".CallActivity">
+
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
