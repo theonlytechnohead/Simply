@@ -33,4 +33,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GoogleActivity.class);
         startActivity(intent);
     }
+
+    public void goToText(View view) {
+        Intent intent = new Intent(this, TextActivity.class);
+        startActivity(intent);
+    }
 }
