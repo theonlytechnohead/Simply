@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.google.android.gms.ads.AdRequest;
@@ -23,7 +25,7 @@ public class GoogleActivity extends AppCompatActivity {
         googleWebView = findViewById(R.id.googleWebView);
         WebSettings webSettings = googleWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-
+        googleWebView.setWebViewClient(new WebViewClient());
         googleWebView.loadUrl("http://www.google.co.nz");
         Button homeButton = findViewById(R.id.homeButton);
         homeButton.setOnClickListener(new View.OnClickListener() {
