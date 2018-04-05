@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Simply</string>
+    <string name="time_text">12:34</string>
+    <string name="call_button">Call</string>
+    <string name="text_button">Text</string>
+    <string name="google_button">Google</string>
+</resources>
