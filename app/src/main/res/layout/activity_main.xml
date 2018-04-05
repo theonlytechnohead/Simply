@@ -59,9 +59,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="goToCall"
                 android:text="@string/call_button"
                 android:textColor="#000044"
-                android:textSize="25sp"/>
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/textButton"
