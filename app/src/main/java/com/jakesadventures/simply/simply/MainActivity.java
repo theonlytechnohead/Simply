@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToCall(View view) {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_APP_CONTACTS);
+        Intent intent = new Intent(Intent.ACTION_DIAL);
         startActivity(intent);
     }
 }

@@ -34,8 +34,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="If for some reason a dialog does not apear asking you if you if you would like to set Simply as your home page, please do as follows. Go to Settings -> Apps -> Find Simply -> Click "
-                android:textColor="#000044" />
+                android:text="It is recommended to set Simply as your default launcher. Search for instructions on Google if you don't know how to do this!"
+                android:textColor="#000044"
+                android:layout_margin="10dp"/>
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
