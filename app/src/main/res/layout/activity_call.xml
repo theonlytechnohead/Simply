@@ -1,58 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/homeButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:weightSum="10">
-
-        <WebView
-            android:id="@+id/googleWebView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="9">
-
-        </WebView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="goToHome"
-                android:text="HOME"
-                android:textSize="25sp"/>
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="goToText"
-                android:text="TEXT"
-                android:textSize="25sp" />
-
-            <Button
-                android:id="@+id/homeButton"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="goToGoogle"
-                android:text="GOOGLE"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_weight="1"
+        android:onClick="goToHome"
+        android:text="BACK"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="411dp" />
 
 </android.support.constraint.ConstraintLayout>
