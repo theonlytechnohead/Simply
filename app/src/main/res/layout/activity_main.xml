@@ -7,49 +7,59 @@
     android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="10">
+        android:weightSum="10"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <TextClock
             android:id="@+id/textClock"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:background="#000044"
             android:format12Hour="hh:mm a"
             android:gravity="center_horizontal"
-            android:textColor="#000044"
+            android:text="@string/time_text"
+            android:textColor="#ffffff"
             android:textSize="50sp"
-            android:textStyle="bold"
-            android:layout_weight="1.25"
-            android:text="@string/time_text"/>
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="5.75"
-            android:onClick="goToCall">
+            android:layout_height="308dp"
+            android:layout_weight="1.25"
+            android:orientation="vertical">
 
-            <TextView
+            <Button
+                android:id="@+id/changeTheme"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="It is recommended to set Simply as your default launcher. Search for instructions on Google if you don't know how to do this!"
-                android:textColor="#000044"
-                android:layout_margin="10dp"/>
+                android:textColor="#000044" />
+
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
-            android:layout_height="0dp"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-5066661451622533/7089537947"
-            android:layout_weight="1"/>
+            ads:adUnitId="ca-app-pub-5066661451622533/7089537947" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="2"
             android:orientation="horizontal"
@@ -57,6 +67,7 @@
 
             <Button
                 android:id="@+id/callButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -67,6 +78,7 @@
 
             <Button
                 android:id="@+id/textButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -77,13 +89,14 @@
 
             <Button
                 android:id="@+id/googleButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="goToGoogle"
                 android:text="@string/google_button"
                 android:textColor="#000044"
-                android:textSize="25sp" />
+                android:textSize="22sp" />
         </LinearLayout>
 
     </LinearLayout>
