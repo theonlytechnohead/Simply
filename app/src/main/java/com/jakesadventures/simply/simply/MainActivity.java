@@ -16,6 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     public int points = 0;
     public String customApp1 = "";
+    public String customApp2 = "";
+    public String customApp3 = "";
+    public String customApp4 = "";
+    public String customApp5 = "";
+    public String customApp6 = "";
+    public String customApp7 = "";
+    public String customApp8 = "";
+    public String customApp9 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +88,88 @@ public class MainActivity extends AppCompatActivity {
     public void LoadInformation (){
         SharedPreferences sharedPref= getSharedPreferences("mypref", 0);
         points = Integer.valueOf(sharedPref.getString("points", "0"));
-        
+
+    }
+
+    public void button1 () {
+        if(customApp1 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button2 () {
+        if(customApp2 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button3 () {
+        if(customApp3 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button4 () {
+        if(customApp4 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button5 () {
+        if(customApp5 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button6 () {
+        if(customApp6 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button7 () {
+        if(customApp7 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button8 () {
+        if(customApp8 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
+    }
+
+    public void button9 () {
+        if(customApp9 == ""){
+            //set app as prompt
+        }
+        else{
+            //open app
+        }
     }
 
 
