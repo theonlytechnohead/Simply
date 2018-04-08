@@ -34,19 +34,94 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:layout_weight="1.25" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="308dp"
+            android:layout_height="398dp"
             android:layout_weight="1.25"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/changeTheme"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000044" />
+                android:layout_height="match_parent"
+                android:layout_weight="1.25"
+                android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/button11"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <Button
+                    android:id="@+id/button12"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <Button
+                    android:id="@+id/button13"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button7"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <Button
+                    android:id="@+id/button8"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <Button
+                    android:id="@+id/button9"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"

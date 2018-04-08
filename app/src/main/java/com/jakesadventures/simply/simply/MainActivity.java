@@ -1,6 +1,7 @@
 package com.jakesadventures.simply.simply;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +14,14 @@ import com.google.android.gms.ads.AdView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public int points = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //variables to push and pull from files
+
+
 
         //Hide the nav bar
         View decorView = getWindow().getDecorView();
@@ -54,6 +61,24 @@ public class MainActivity extends AppCompatActivity {
     public void goToCall(View view) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         startActivity(intent);
+    }
+
+    public void SaveInformation () {
+        // Create object of SharedPreferences.
+        SharedPreferences sharedPref= getSharedPreferences("mypref", 0);
+        //now get Editor
+        SharedPreferences.Editor editor= sharedPref.edit();
+
+        //put your value
+        editor.putString("points", String.valueOf(points));
+
+        //commits your edits
+        editor.commit();
+    }
+
+    public void LoadInformation (){
+        SharedPreferences sharedPref= getSharedPreferences("mypref", 0);
+        int points = int.valueOf(sharedPref.getString("points", ""));
     }
 
 
