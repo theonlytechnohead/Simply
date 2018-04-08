@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
@@ -14,10 +15,12 @@ public class OutgoingCallReceiver extends BroadcastReceiver {
             System.out.println("Receiver start");
             String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
             if(state.equals(TelephonyManager.EXTRA_STATE_RINGING)){
-                Toast.makeText(context,"Incoming call", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Phone call incoming!!", Toast.LENGTH_SHORT).show();
+                Intent intention = new Intent(context.getApplicationContext(), CallActivity.class);
+                intention.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intention);
             }
             if ((state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK))){
-                Toast.makeText(context,"Received call", Toast.LENGTH_SHORT).show();
             }
             if (state.equals(TelephonyManager.EXTRA_STATE_IDLE)){
                 Toast.makeText(context,"Idle state", Toast.LENGTH_SHORT).show();

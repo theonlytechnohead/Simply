@@ -6,15 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/homeButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:onClick="goToHome"
-        android:text="BACK"
-        android:textSize="25sp"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="411dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="150dp">
+
+        <Button
+            android:id="@+id/declineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="declineCall"
+            android:text="DECLINE"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/answerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="answerCall"
+            android:text="ANSWER"
+            android:textSize="25sp" />
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
