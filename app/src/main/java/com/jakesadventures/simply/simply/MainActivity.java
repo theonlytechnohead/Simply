@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             // NEW TEST
             PackageManager packageManager = getPackageManager();
-            List<ApplicationInfo> list = packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
+            List<ApplicationInfo> list = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
         }
         else{
             //open app
