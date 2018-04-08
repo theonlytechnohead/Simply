@@ -35,6 +35,6 @@ public class CallActivity extends AppCompatActivity {
     }
 
     public void goToHome(View view) {
-        finish();
+        //finish();
     }
 }

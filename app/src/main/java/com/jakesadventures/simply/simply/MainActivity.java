@@ -2,15 +2,22 @@ package com.jakesadventures.simply.simply;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -105,8 +112,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button2Function (View view) {
+
         if(customApp2 == ""){
             //set app as prompt
+
+            // OLD TEST
+            //Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+            //mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+            //List<ResolveInfo> pkgAppsList = this.getPackageManager().queryIntentActivities( mainIntent, 0);
+
+            // NEW TEST
+            PackageManager packageManager = getPackageManager();
+            List<ApplicationInfo> list = packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
         }
         else{
             //open app

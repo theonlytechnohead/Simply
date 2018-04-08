@@ -5,7 +5,7 @@ import android.bluetooth.BluetoothHeadset;
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.TelephonyManager;
-import com.android.internal.telephony.ITelephony;
+//import com.android.internal.telephony.ITelephony;
 import android.util.Log;
 import android.view.KeyEvent;
 
@@ -64,11 +64,11 @@ public class AnswerCallService extends IntentService {
         Class c = Class.forName(tm.getClass().getName());
         Method m = c.getDeclaredMethod("getITelephony");
         m.setAccessible(true);
-        ITelephony telephonyService;
-        telephonyService = (ITelephony)m.invoke(tm);
+        //ITelephony telephonyService;
+        ///telephonyService = (ITelephony)m.invoke(tm);
 
         // Silence the ringer and answer the call!
-        telephonyService.silenceRinger();
-        telephonyService.answerRingingCall();
+        //telephonyService.silenceRinger();
+        //telephonyService.answerRingingCall();
     }
 }
