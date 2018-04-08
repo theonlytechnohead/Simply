@@ -55,19 +55,22 @@
                     android:id="@+id/button11"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button1Function" />
 
                 <Button
                     android:id="@+id/button12"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button4Function" />
 
                 <Button
                     android:id="@+id/button13"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button7Function" />
 
             </LinearLayout>
 
@@ -81,19 +84,22 @@
                     android:id="@+id/button7"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button2Function" />
 
                 <Button
                     android:id="@+id/button8"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button5Function" />
 
                 <Button
                     android:id="@+id/button9"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button8Function" />
 
             </LinearLayout>
 
@@ -107,19 +113,22 @@
                     android:id="@+id/button3"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button3Function" />
 
                 <Button
                     android:id="@+id/button4"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button6Function" />
 
                 <Button
                     android:id="@+id/button5"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:onClick="button9Function" />
 
             </LinearLayout>
         </LinearLayout>

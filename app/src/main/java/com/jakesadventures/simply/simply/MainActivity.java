@@ -91,86 +91,120 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void button1 () {
+    public void button1Function (View view) {
         if(customApp1 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp1);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button2 () {
+    public void button2Function (View view) {
         if(customApp2 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp2);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button3 () {
+    public void button3Function (View view) {
         if(customApp3 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp3);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button4 () {
+    public void button4Function (View view) {
         if(customApp4 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp4);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button5 () {
+    public void button5Function (View view) {
         if(customApp5 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp5);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button6 () {
+    public void button6Function (View view) {
         if(customApp6 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp6);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button7 () {
+    public void button7Function (View view) {
         if(customApp7 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp7);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button8 () {
+    public void button8Function (View view) {
         if(customApp8 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp8);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
 
-    public void button9 () {
+    public void button9Function (View view) {
         if(customApp9 == ""){
             //set app as prompt
         }
         else{
             //open app
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(customApp9);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
         }
     }
-
-
 }
