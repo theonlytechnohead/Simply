@@ -15,6 +15,7 @@ import com.google.android.gms.ads.AdView;
 public class MainActivity extends AppCompatActivity {
 
     public int points = 0;
+    public String customApp1 = "";/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void LoadInformation (){
         SharedPreferences sharedPref= getSharedPreferences("mypref", 0);
-        int points = int.valueOf(sharedPref.getString("points", ""));
+        int points = Integer.valueOf(sharedPref.getString("points", ""));
     }
 
 
