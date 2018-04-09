@@ -59,79 +59,8 @@
                     android:layout_weight="1"
                     android:onClick="button4Function" />
 
-                <Button
-                    android:id="@+id/button13"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button7Function" />
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.25"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button7"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button2Function" />
-
-                <Button
-                    android:id="@+id/button8"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button5Function" />
-
-                <Button
-                    android:id="@+id/button9"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button8Function" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.25"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button3"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button3Function" />
-
-                <Button
-                    android:id="@+id/button4"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button6Function" />
-
-                <Button
-                    android:id="@+id/button5"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="button9Function" />
-
-            </LinearLayout>
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
