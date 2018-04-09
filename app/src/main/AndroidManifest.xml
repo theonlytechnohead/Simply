@@ -39,6 +39,10 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
         </activity>
 
+        <activity android:name=".AllAppsActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        </activity>
+
         <receiver android:name=".OutgoingCallReceiver">
             <intent-filter android:priority="100">
                 <action android:name="android.intent.action.PHONE_STATE" />
