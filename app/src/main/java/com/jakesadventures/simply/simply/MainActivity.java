@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void OpenApps () {
+    public void OpenApps (View view) {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         Intent intent = new Intent(this, AllAppsActivity.class);
         startActivity(intent);

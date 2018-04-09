@@ -49,7 +49,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:onClick="OpenApps" />
+                    android:onClick="OpenApps"
+                    android:text="BUTTON 1" />
 
                 <Button
                     android:id="@+id/button12"
@@ -57,7 +58,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:onClick="button4Function" />
+                    android:onClick="button4Function"
+                    android:text="BUTTON 2" />
 
             </LinearLayout>
 
