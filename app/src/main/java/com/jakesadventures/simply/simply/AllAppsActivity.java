@@ -45,8 +45,7 @@ public class AllAppsActivity extends ListActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        boolean result = true;
-        return result;
+        return true;
     }
 
     private void displayAboutDialog() {
