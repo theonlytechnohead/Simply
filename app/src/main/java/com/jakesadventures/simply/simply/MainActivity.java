@@ -70,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToPoints(View view) {
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        Intent intent = new Intent(this, PointsActivity.class);
+        startActivity(intent);
+    }
+
     public void goToText(View view) {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_APP_MESSAGING);

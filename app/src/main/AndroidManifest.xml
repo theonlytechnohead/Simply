@@ -30,11 +30,16 @@
         <activity android:name=".GoogleActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
+
         <activity android:name=".TextActivity">
 
         </activity>
+
+        <activity android:name=".PointsActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        </activity>
+
         <activity android:name=".CallActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
         </activity>
