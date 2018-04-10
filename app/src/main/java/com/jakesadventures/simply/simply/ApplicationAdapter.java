@@ -53,9 +53,9 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 
         ApplicationInfo applicationInfo = appsList.get(position);
         if (null != applicationInfo) {
-            TextView appName = (TextView) view.findViewById(R.id.app_name);
-            TextView packageName = (TextView) view.findViewById(R.id.app_paackage);
-            ImageView iconview = (ImageView) view.findViewById(R.id.app_icon);
+            TextView appName = view.findViewById(R.id.app_name);
+            TextView packageName = view.findViewById(R.id.app_paackage);
+            ImageView iconview = view.findViewById(R.id.app_icon);
 
             appName.setText(applicationInfo.loadLabel(packageManager));
             packageName.setText(applicationInfo.packageName);
@@ -63,4 +63,4 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         }
         return view;
     }
-};
+}
