@@ -32,20 +32,21 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <activity android:name=".TextActivity">
+        <activity android:name=".TextActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
         <activity android:name=".PointsActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity android:name=".CallActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity android:name=".AllAppsActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <receiver android:name=".OutgoingCallReceiver">

@@ -51,7 +51,8 @@
                 android:onClick="goToHome"
                 android:text="HOME"
                 android:textColor="#000044"
-                android:textSize="45sp" />
+                android:textSize="45sp"
+                android:theme="@style/Base.Widget.AppCompat.Button.Borderless"/>
         </LinearLayout>
 
     </LinearLayout>
