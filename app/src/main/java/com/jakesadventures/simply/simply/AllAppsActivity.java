@@ -31,6 +31,12 @@ public class AllAppsActivity extends ListActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //Full screen mode
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        decorView.setSystemUiVisibility(uiOptions);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps);
 
