@@ -1,6 +1,8 @@
 package com.jakesadventures.simply.simply;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -89,7 +91,7 @@ public class AllAppsActivity extends ListActivity {
     }
 
     private List<ApplicationInfo> checkForLaunchIntent(List<ApplicationInfo> list) {
-        ArrayList<ApplicationInfo> applist = new ArrayList<ApplicationInfo>();
+        ArrayList<ApplicationInfo> applist = new ArrayList<>();
         for (ApplicationInfo info : list) {
             try {
                 if (null != packageManager.getLaunchIntentForPackage(info.packageName)) {
@@ -109,6 +111,7 @@ public class AllAppsActivity extends ListActivity {
         @Override
         protected Void doInBackground(Void... params) {
             applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
+            Collections.sort(applist, new ApplicationInfo.DisplayNameComparator(packageManager));
             listadaptor = new ApplicationAdapter(AllAppsActivity.this,
                     R.layout.snippet_list_row, applist);
 
