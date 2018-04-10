@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -25,6 +26,8 @@ public class PointsActivity extends Activity implements RewardedVideoAdListener 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TextView pointsLabel = findViewById(R.id.points);
+        pointsLabel.setText(String.valueOf(points));
         //Full screen mode
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -56,6 +59,8 @@ public class PointsActivity extends Activity implements RewardedVideoAdListener 
         points += 10;
         SaveInformation();
         Toast.makeText(this, "Current points: " + String.valueOf(points), Toast.LENGTH_SHORT).show();
+        TextView pointsLabel = findViewById(R.id.points);
+        pointsLabel.setText(String.valueOf(points));
     }
 
     @Override
