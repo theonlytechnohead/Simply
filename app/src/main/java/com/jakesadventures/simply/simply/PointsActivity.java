@@ -1,5 +1,6 @@
 package com.jakesadventures.simply.simply;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +18,7 @@ import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 
-public class PointsActivity extends AppCompatActivity {
+public class PointsActivity extends Activity implements RewardedVideoAdListener {
     private RewardedVideoAd mRewardedVideoAd;
 
     @Override
@@ -34,7 +35,7 @@ public class PointsActivity extends AppCompatActivity {
 
         // Use an activity context to get the rewarded video instance.
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        mRewardedVideoAd.setRewardedVideoAdListener((RewardedVideoAdListener) this);
+        mRewardedVideoAd.setRewardedVideoAdListener(this);
 
         loadRewardedVideoAd();
     }
@@ -42,10 +43,50 @@ public class PointsActivity extends AppCompatActivity {
     private void loadRewardedVideoAd() {
         mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
                 new AdRequest.Builder().build());
+    }
 
-        if (mRewardedVideoAd.isLoaded()) {
-            mRewardedVideoAd.show();
-        }
+    @Override
+    public void onRewarded(RewardItem reward) {
+        Toast.makeText(this, "onRewarded! currency: " + reward.getType() + "  amount: " +
+                reward.getAmount(), Toast.LENGTH_SHORT).show();
+        // Reward the user.
+    }
+
+    @Override
+    public void onRewardedVideoAdLeftApplication() {
+        Toast.makeText(this, "onRewardedVideoAdLeftApplication",
+                Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRewardedVideoAdClosed() {
+        Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRewardedVideoAdFailedToLoad(int errorCode) {
+        Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRewardedVideoAdLoaded() {
+        Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+        mRewardedVideoAd.show();
+    }
+
+    @Override
+    public void onRewardedVideoAdOpened() {
+        Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRewardedVideoStarted() {
+        Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRewardedVideoCompleted() {
+        Toast.makeText(this, "onRewardedVideoCompleted", Toast.LENGTH_SHORT).show();
     }
 
     @Override
