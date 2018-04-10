@@ -35,7 +35,7 @@ public class PointsActivity extends Activity implements RewardedVideoAdListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points);
 
-
+        LoadInformation();
         TextView pointsLabel = findViewById(R.id.points);
         pointsLabel.setText(String.valueOf(points));
 
