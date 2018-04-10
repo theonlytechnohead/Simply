@@ -26,8 +26,6 @@ public class PointsActivity extends Activity implements RewardedVideoAdListener 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        TextView pointsLabel = findViewById(R.id.points);
-        pointsLabel.setText(String.valueOf(points));
         //Full screen mode
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -36,6 +34,11 @@ public class PointsActivity extends Activity implements RewardedVideoAdListener 
         decorView.setSystemUiVisibility(uiOptions);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points);
+
+
+        TextView pointsLabel = findViewById(R.id.points);
+        pointsLabel.setText(String.valueOf(points));
+
         //getActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Use an activity context to get the rewarded video instance.
