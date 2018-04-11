@@ -49,7 +49,7 @@ public class PointsActivity extends Activity implements RewardedVideoAdListener 
     }
 
     private void loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
+        mRewardedVideoAd.loadAd("ca-app-pub-5066661451622533/6667370693",
                 new AdRequest.Builder().build());
     }
 
