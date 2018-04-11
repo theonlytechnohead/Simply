@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,11 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if app is default launcher
         if (!isMyAppLauncherDefault()) {
-            Intent selector = new Intent();
-            selector.setAction(Intent.ACTION_MAIN);
-            selector.addCategory(Intent.CATEGORY_HOME);
-            selector.addFlags( Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET );
-            startActivity(Intent.createChooser(selector, "Select your app:"));
+            Intent selector = new Intent(Settings.ACTION_HOME_SETTINGS);
 
             startActivity(selector);
         }
