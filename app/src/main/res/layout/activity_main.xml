@@ -109,7 +109,7 @@
                 android:textColor="#000044"
                 android:textSize="25sp" />
 
-            <Button
+            <me.grantland.widget.AutofitTextView
                 android:id="@+id/googleButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
@@ -118,7 +118,7 @@
                 android:onClick="goToGoogle"
                 android:text="@string/google_button"
                 android:textColor="#000044"
-                android:textSize="18sp" />
+                android:textSize="25sp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -6,9 +6,9 @@ android {
         applicationId "com.jakesadventures.simply.simply"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 6
+        versionCode 7
 
-        versionName "1.5"
+        versionName "1.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -21,7 +21,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
@@ -29,6 +29,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:12.0.1'
     implementation 'com.google.android.gms:play-services-ads:12.0.1'
     implementation 'com.google.android.gms:play-services-ads:12.0.1'
-    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:design:27.1.1'
     implementation 'com.google.android.gms:play-services-maps:12.0.1'
+    implementation 'me.grantland:autofittextview:0.2.1'
 }
