@@ -57,12 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if app is default launcher
         if (!isMyAppLauncherDefault()) {
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            Intent selector = new Intent();
+            selector.setAction(Intent.ACTION_MAIN);
+            selector.addCategory(Intent.CATEGORY_HOME);
+            selector.addFlags( Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET );
+            startActivity(Intent.createChooser(selector, "Select your app:"));
 
-            startActivity(Intent.createChooser(intent, "Set as default"));
+            startActivity(selector);
         }
     }
 
