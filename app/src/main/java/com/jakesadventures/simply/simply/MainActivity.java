@@ -1,6 +1,8 @@
 package com.jakesadventures.simply.simply;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -17,6 +19,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         AdView mAdView = findViewById(R.id.adView);
         mAdView.loadAd(adRequest);
+
+        // Check if app is default launcher
+        if (!isMyAppLauncherDefault()) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            startActivity(Intent.createChooser(intent, "Set as default"));
+        }
     }
 
     @Override
@@ -62,6 +75,28 @@ public class MainActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(uiOptions);
+    }
+
+    private boolean isMyAppLauncherDefault() {
+        final IntentFilter filter = new IntentFilter(Intent.ACTION_MAIN);
+        filter.addCategory(Intent.CATEGORY_HOME);
+
+        List<IntentFilter> filters = new ArrayList<IntentFilter>();
+        filters.add(filter);
+
+        final String myPackageName = getPackageName();
+        List<ComponentName> activities = new ArrayList<ComponentName>();
+        final PackageManager packageManager = (PackageManager) getPackageManager();
+
+        // You can use name of your package here as third argument
+        packageManager.getPreferredActivities(filters, activities, null);
+
+        for (ComponentName activity : activities) {
+            if (myPackageName.equals(activity.getPackageName())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void goToGoogle(View view) {
