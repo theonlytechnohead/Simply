@@ -60,10 +60,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if app is default launcher
         if (!isMyAppLauncherDefault()) {
-            Intent selector = new Intent(Settings.ACTION_HOME_SETTINGS);
-            showToast("Please select 'Simply' as your default home screen", 10);
-            //Toast.makeText(this,"Please select 'Simply' as your default home screen", Toast.LENGTH_LONG).show();
+            final Intent selector = new Intent(Settings.ACTION_HOME_SETTINGS);
+            //showToast("Please select 'Simply' as your default home screen", 10);
+            Toast.makeText(this,"Please select 'Simply' as your default home screen", Toast.LENGTH_LONG).show();
             //startActivity(selector);
+            new CountDownTimer(3500, 1000){
+                public void onTick(long millisUntilFinished){};
+                public void onFinish() {
+                    startActivity(selector);
+                }
+            }.start();
         }
     }
 
