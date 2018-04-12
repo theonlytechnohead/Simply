@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
@@ -59,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
         // Check if app is default launcher
         if (!isMyAppLauncherDefault()) {
             Intent selector = new Intent(Settings.ACTION_HOME_SETTINGS);
-
+            Toast.makeText(getApplicationContext(), "Please select 'Simply' as your home screen",
+                    Toast.LENGTH_LONG).show();
             startActivity(selector);
         }
     }
