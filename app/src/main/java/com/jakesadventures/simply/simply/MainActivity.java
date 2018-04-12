@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
         // Check if app is default launcher
         if (!isMyAppLauncherDefault()) {
             Intent selector = new Intent(Settings.ACTION_HOME_SETTINGS);
-            Toast.makeText(this,"Please select 'Simply' as your default home screen", Toast.LENGTH_LONG).show();
+            showToast("Please select 'Simply' as your default home screen", 10);
+            //Toast.makeText(this,"Please select 'Simply' as your default home screen", Toast.LENGTH_LONG).show();
             startActivity(selector);
         }
     }
@@ -78,24 +79,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showToast(String textToShow, Integer duration) {
-        // Set the toast and duration
-        final Toast toast = Toast.makeText(this, textToShow, Toast.LENGTH_LONG);
-        int toastDurationInMilliSeconds = duration * 1000;
+        final Toast tag = Toast.makeText(getBaseContext(), textToShow,Toast.LENGTH_SHORT);
+        tag.show();
+        new CountDownTimer(duration * 1000, 1000)
+        {
+            public void onTick(long millisUntilFinished) {tag.show();}
+            public void onFinish() {tag.show();}
 
-        // Set the countdown to display the toast
-        CountDownTimer toastCountDown;
-        toastCountDown = new CountDownTimer(toastDurationInMilliSeconds, 1000 /*Tick duration*/) {
-            public void onTick(long millisUntilFinished) {
-                toast.show();
-            }
-            public void onFinish() {
-                toast.cancel();
-            }
-        };
-
-        // Show the toast and starts the countdown
-        toast.show();
-        toastCountDown.start();
+        }.start();
     }
 
     private boolean isMyAppLauncherDefault() {
